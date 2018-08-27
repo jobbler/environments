@@ -1,0 +1,14 @@
+# Format of file is:
+#
+# c ssh host
+# c host ssh
+# Short Name		Connection Type	DNS name or IP						Options
+# 			ssh|vnc|html|ff|chrome|vv|telnet
+# 			ff=firefox
+# 			chrome=chrome
+# 			vv=vivaldi
+#
+
+switch1			ssh	admin@switch1.fqdn
+server1			telnet	root@10.X.X.X
+

@@ -1,0 +1,21 @@
+Config { font = "xft:mono-12"
+       , borderColor = "black"
+       , border = TopB
+       , bgColor = "black"
+       , fgColor = "grey"
+       , alpha = 0
+       , position = Static { xpos = 0 , ypos = 22, width = 1900, height = 20 }
+       , allDesktops = True
+       , overrideRedirect = True
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , commands = [ 
+                      Run Com "xmobar_dnf_check.sh" [] "udavail" 100
+                      , Run Com "xmobar_notify.sh" ["-c"] "WEECHAT" 100
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "   } <action=`xmobar_notify.sh -r` button=1><fc=#ffff00>%WEECHAT%</fc></action> { <action=`xmobar_dnf_check.sh -u` button=1>%udavail%</action> "
+       }

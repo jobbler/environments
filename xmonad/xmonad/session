@@ -1,0 +1,8 @@
+#! /bin/bash
+
+# ~/.screenlayout/Docked.sh
+# ~/.screenlayout/DockedSingle.sh
+~/.screenlayout/Docked-2.sh
+
+/usr/bin/xset -dpms
+

@@ -1,0 +1,20 @@
+Config { font = "xft:mono-12"
+       , borderColor = "black"
+       , border = TopB
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = TopW C 60
+       , allDesktops = True
+       , overrideRedirect = True
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , commands = [ Run Date "%a %b %_d %l:%M" "date" 200
+    		    , Run Com "weather.sh" ["kaus"] "KAUS" 6000
+    		    , Run Com "xmobar_vpn_status.sh" ["kaus"] "VPN" 300
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "} <fc=#ee9a00>%date%</fc>     %KAUS% { %VPN%"
+       }

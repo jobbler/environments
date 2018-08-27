@@ -1,0 +1,36 @@
+#! /bin/bash
+
+function join_string() { 
+    local IFS="$1"; shift; echo "$*";
+}
+
+
+# VPN connection names (as reported by nmcli)
+#
+tcp_vpn_connection="CONNECTION_NAME"
+udp_vpn_connection="CONNECTION_NAME2"
+
+
+# This is a host that is resolvable only when the vpn is active
+#
+resolvable_host=HOST.FQDN
+
+# This is a list of networks (as reported by nmcli) that require a TCP vpn connection
+#
+tcp_connections=(
+    PUBLIC_CON1
+    PUBLIC_CON2
+)
+
+tcp_vpns=$( join_string '|' ${tcp_connections[@]} )
+
+
+# Tabs to open in chrome upon startup
+#
+tabs=(
+    https://URL1
+    https://URL2
+)
+
+browser_tabs=${tabs[@]}
+
