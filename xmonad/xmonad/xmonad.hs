@@ -125,7 +125,7 @@ main = do
                         }
         } 
         `additionalKeys`
-        [ ((myModMask,                xK_s   ), spawn "terminator -x c.sh $( awk '!/^#|^$/ {print $1}' ~/bin/clist-expanded.conn | dmenu )")
+        [ ((myModMask,                xK_s   ), spawn "terminator -x ~/bin/c.sh $( awk '!/^#|^$/ {print $1}' ~/bin/clist-expanded.conn | dmenu )")
         , ((myModMask,                xK_z   ), spawn "/usr/bin/xscreensaver-command -lock" )
         , ((myModMask,                xK_v   ), spawn "/usr/bin/vncviewer -PasswordFile ~/.vnc/passwords/${USER}" )
         , ((myModMask,                xK_x   ), spawn "xmonad_start_work.sh ~/bin/workrc" )
