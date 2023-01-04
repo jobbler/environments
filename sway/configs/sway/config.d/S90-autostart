@@ -1,0 +1,8 @@
+
+# Notifications
+	exec --no-startup-id mako --layer overlay --anchor top-center --icons 1 --markup 1 --actions 1
+
+# Authentication
+#	exec lxpolkit
+    exec /usr/libexec/polkit-gnome-authentication-agent-1
+	exec gnome-keyring-daemon --start -bindsym-components=pkcs11,ssh,secrets

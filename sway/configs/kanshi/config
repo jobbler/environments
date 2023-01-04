@@ -1,0 +1,11 @@
+profile docked {
+    output eDP-1 disable
+    output "ViewSonic Corporation VA2759 Series UL7204000275" enable position 0,0
+    output "ViewSonic Corporation VA2759 Series UL7192301469" enable position 1920,0
+    output "ViewSonic Corporation VA2759 Series UL7192100121" enable position 3840,0
+
+}
+
+profile undocked {
+    output eDP-1 enable
+}

@@ -1,0 +1,148 @@
+{
+    "gtk-layer-shell": false,
+    "layer": "top", 
+    "position": "top", 
+    "height": 30, 
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock", "custom/weather"],
+    // "modules-right": ["custom/vpn", "pulseaudio", "network", "backlight", "battery", "tray"],
+    "modules-right": ["pulseaudio", "network", "backlight", "battery", "tray"],
+    // "modules-right": ["custom/vpn", "custom/krb", "custom/irc", "custom/dnf", "custom/vms", "pulseaudio", "network", "backlight", "battery", "tray"],
+    // Modules configuration
+    // "sway/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+    "sway/workspaces": {
+        "all-outputs": true
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%a %b %d - %I:%M %p}",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "interface": "wlp0*",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/weather": {
+        "return-type": "json",
+        "format": "{}",
+        "exec": "$HOME/bin/waybar-weather.sh kaus",
+        "interval": 900,
+//        "signal": 8,
+        "tooltip": false
+    },
+    "custom/dnf": {
+        "return-type": "json",
+        "format": "{}",
+        "exec": "$HOME/bin/waybar-dnf.sh",
+        "interval": 900,
+        "signal": 1,
+        "tooltip": false
+    },
+    "custom/irc": {
+        "return-type": "json",
+        "format": "{}",
+        "exec": "$HOME/bin/waybar-irc.sh",
+        "on-click": "$HOME/bin/irc-notifications.sh -d",
+        "interval": 65,
+        "signal": 2,
+        "tooltip": false
+    },
+    "custom/vpn": {
+        "format": "{}",
+        "return-type": "json",
+        "max-length": 5,
+        "interval": 65,
+        "signal": 3,
+        "exec": "$HOME/bin/waybar-vpn.sh",
+        "on-click": "$HOME/bin/vpn-toggle.sh",
+        "tooltip": true
+    },
+    "custom/krb": {
+        "return-type": "json",
+        "format": "{}",
+        "max-length": 5,
+        "exec": "$HOME/bin/waybar-krb.sh",
+        "on-click": "$HOME/bin/krb-init.sh",
+        "interval": 65,
+        "signal": 4,
+        "tooltip": true
+    },
+    "custom/vms": {
+        "return-type": "json",
+        "format": "{}",
+        "max-length": 10,
+        "exec": "$HOME/bin/waybar-virt.sh",
+        "on-click": "virt-manager",
+        "interval": 65,
+        "tooltip": true
+    },
+        "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""],
+        "on-scroll-up": "/usr/bin/light -A 5",
+        "on-scroll-down": "/usr/bin/light -U 5"
+    }
+}

@@ -1,0 +1,28 @@
+
+
+# This is a host that is resolvable only when the vpn is active
+#
+resolvable_host=rover.redhat.com
+
+
+# Tabs to open in chrome upon startup
+#
+tabs=(
+    https://mail.redhat.com
+    https://calendar.redhat.com
+    https://chat.google.com
+    https://coreos.slack.com
+    https://drive.google.com/open?id=1Q4W3RohKJSekAq8TxLFMc2gc728feCdDif_jkWDjg3I
+)
+
+# For cnf integration team
+#    https://coreos.slack.com
+#    https://trello.com/b/D2vCxh6k/cnf-integration
+
+# company used chats
+#    https://chat.google.com
+#    https://coreos.slack.com
+
+
+browser_tabs=${tabs[@]}
+

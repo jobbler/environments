@@ -1,0 +1,35 @@
+#! /bin/bash
+
+while getopts ":cs" opt
+do
+  case ${opt} in
+    s )
+        simple=1
+        ;;
+    c )
+        connect=1
+        ;;
+  esac
+done
+
+text="krb"
+tooltip=""
+
+[[ ${connect} ]] \
+    && {
+        kpass=$( Xdialog --wmclass float --password --inputbox "Enter kerberos password:" 0 0 2>&1 )
+        echo ${kpass} | kinit
+    } || {
+        if klist &> /dev/null
+        then
+          class="ticket"
+          percentage=100
+        else
+          class="noticket"
+          percentage=0
+        fi
+    }
+
+cat <<EOT
+{"text": "$text", "tooltip": "$tooltip", "class": "$class", "percentage": "$percentage"}
+EOT

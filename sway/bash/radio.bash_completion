@@ -1,0 +1,11 @@
+_radio()
+{
+  local cur 
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  opts="$( grep ^${cur} ~/bin/radio.streams | grep -v -E '^#|^;' | awk '{print $1}' )"
+
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+}
+
+complete -F _radio radio 
+

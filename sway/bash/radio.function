@@ -1,0 +1,32 @@
+
+radio() { 
+	name=$1
+
+	status_file=~/.radio-status
+	stations_file=~/bin/radio.streams
+
+	[[ ${name} =~ "playing" ]] \
+		&& {
+			ffprobe -i ${url} |& sed -n '/StreamTitle/ s/.*:\s*//p' 
+		} || {
+
+			[[ -f ${status_file} ]] \
+				&& {
+					kill $( sed -n 's/^pid:\s*//p' ${status_file} )
+					rm ${status_file}
+				}
+
+			! [[ ${name} =~ "off" ]] \
+				&& {
+				url=$( grep ${name} ${stations_file} | awk '{print $2 }' )
+				station="$( ffprobe -i ${url} |& sed -n '/icy-name/ s/.*:\s*//p' )"
+				ffplay -loglevel quiet -nodisp -i ${url} &
+				cat <<EOF> ${status_file}
+pid: $!
+station: $station
+url: $url
+EOF
+			}
+	}
+}
+

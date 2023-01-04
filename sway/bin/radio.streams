@@ -1,0 +1,87 @@
+
+# get these from https://www.internet-radio.com
+
+rockabilly_rock_around_the_block    http://uk6.internet-radio.com:8465/stream
+rockabilly_mixabilly_radio          http://perseus.shoutca.st:8440/live
+	
+# Punk
+punk_real_punk_radio				http://149.56.155.73:8080
+punk_anarchy_and_angels				http://199.101.51.168:8022
+punk_punk4punks						http://69.175.94.98:8240/stream
+
+# Country
+country_hawaii_public_radio_1		http://khpr-ice.streamguys1.com:80/khpr2
+country_classic_country_1630		http://198.105.216.204:8194/stream
+country_sam_meyers_classic_country	http://91.121.82.33:63224
+country_hpr_2						http://87.98.130.255:8401/stream
+
+# Rock
+rock_hd								http://167.114.64.181:8364/stream
+rock_hard_radio_classics			http://192.111.140.11:8516/stream
+rock_hard_rockin_80s				http://stream-licensing.com:8128
+rock_glassrock						http://glassrock.live-streams.nl:8007/main
+rock_alt_rock						http://xymox.dyndns.org:5000/shout
+rock_big_hair_radio					http://192.111.140.11:8508/stream
+
+# Metal
+metal_black_label_metal_club		http://108.61.20.171:20406
+metal_metal							http://69.4.234.186:9100
+metal_gotradio_-_80s_metal			http://206.217.213.236:8420
+metal_aardschok_radio				http://178.18.137.248:80
+metal_abash_the_metal_stood			http://50.7.70.58:8785
+metal_castle_blakk					http://66.85.88.18:5107/stream
+metal_rebel							http://67.212.238.178:7039/stream
+
+# misc
+misc_koop							http://streaming.koop.org:8508
+misc_oldschool						http://198.178.123.11:7080
+
+# Reggae
+reggae_stream						http://167.114.64.181:8192/stream
+
+# Classic
+classic_rock_miami					http://uk2.internet-radio.com:8054/stream
+classic_rewound_radio				http://71.125.37.66:6500/stream
+classic_elvis						http://188.165.187.85:9978/stream
+classic_rock_baars					http://server-67.stream-server.nl:8840/stream
+classic_rock_florida				http://198.58.98.83:8258/stream
+
+# Oldies
+oldies_1940s						http://199.189.111.28:8012
+oldies_nonstop						http://s18.myradiostream.com:9676
+
+# 70s disco
+70s_san_francisco_70s_hits          http://198.178.123.17:10922
+70s_disco_classic_radio             http://54.36.89.71:8742
+70s_gold_web_radio                  http://199.233.234.34:25418
+70s_all_oldies                      http://144.217.129.213:9142
+70s_radio_northsea                  http://109.169.54.86:7002
+70s_oldies_paradise                 http://78.129.227.10:8260
+70s_easy_rock_paradise              http://78.129.227.10:8262
+70s_the_time_machine                http://192.211.51.158:5426
+70s_havent_heard_in_years           http://104.251.118.50:8693
+70s_the_lynx_super_70s              http://158.69.4.171:8226
+70s_aebisland                       http://mediaserv21.live-streams.nl:8008
+70s_radio_kemonia                   http://kemoniastreaming2.net:8000
+70s_classe_especial                 http://45.43.200.114:8502
+pop_irs_aac_feed                    http://51.255.235.165:5472
+
+country_the_ranch_arizona           http://us3.internet-radio.com:8297/stream
+country_retro_country               http://144.217.195.24:8942
+country_cowpoke_classic_country     http://184.164.135.70:8133
+country_the_ranch                   http://149.56.195.94:8279
+rock_rockhistory_station         http://192.99.170.8:5722
+pop_age_of_rock http://51.195.139.91:8053
+
+xmas_cue_xmas_classics              http://8.38.78.173:8046
+xmas_melody                         http://192.96.205.59:7000
+xmas_365                            http://174.36.206.197:7038
+xmas_christmas                      http://209.95.35.49:7459
+xmas_classic                        http://91.121.205.70:8238
+xmas_hpr3                           http://87.98.130.255:8282
+
+metal_big_hair                      http://192.111.140.11:8508
+metal_megarock                      http://stream1.megarockradio.net:8240
+
+rock_all_rush                       http://144.217.129.213:8874
+
